@@ -11,5 +11,13 @@ namespace WcfWebApplication
         public decimal Price { get; set; }
         public string CustomName { get; set; }
         public int CustomPhone { get; set; }
+
+        public Bid(int itemNumber, decimal price, string customName, int customPhone)
+        {
+            ItemNumber = itemNumber;
+            Price = price;
+            CustomName = customName;
+            CustomPhone = customPhone;
+        }
     }
 }
