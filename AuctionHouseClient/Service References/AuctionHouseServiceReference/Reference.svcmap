@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d3017fd1-05e7-488c-a5d5-509b0edd5aa0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:6739/AuctionHouseService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AuctionHouseService.xsd" MetadataType="Schema" ID="dae24f36-415d-4b67-a5d9-a2331d98f045" SourceId="1" SourceUrl="http://localhost:6739/AuctionHouseService.svc?xsd=xsd1" />
+    <MetadataFile FileName="AuctionHouseService1.xsd" MetadataType="Schema" ID="a3ca750a-994a-46da-bc8f-281bb1c470e6" SourceId="1" SourceUrl="http://localhost:6739/AuctionHouseService.svc?xsd=xsd2" />
+    <MetadataFile FileName="AuctionHouseService.disco" MetadataType="Disco" ID="c6484f5c-66df-441f-8ba5-853168b1c836" SourceId="1" SourceUrl="http://localhost:6739/AuctionHouseService.svc?disco" />
+    <MetadataFile FileName="AuctionHouseService.wsdl" MetadataType="Wsdl" ID="fd13e3eb-c6e5-487b-877e-1fb40f851f71" SourceId="1" SourceUrl="http://localhost:6739/AuctionHouseService.svc?wsdl" />
+    <MetadataFile FileName="AuctionHouseService2.xsd" MetadataType="Schema" ID="7d2bcac3-aa80-46aa-b25b-09ce58e1559f" SourceId="1" SourceUrl="http://localhost:6739/AuctionHouseService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

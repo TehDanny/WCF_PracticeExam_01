@@ -1,18 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Web;
 
 namespace WcfWebApplication
 {
+    [DataContract]
     public class Product
     {
+        [DataMember]
         public int ItemNumber { get; set; }
+        [DataMember]
         public string ItemDescription { get; set; }
+        [DataMember]
         public decimal RatingPrice { get; set; }
+        [DataMember]
         public decimal BidPrice { get; set; }
+        [DataMember]
         public string BidCustomName { get; set; }
+        [DataMember]
         public int BidCustomPhone { get; set; }
+        [DataMember]
         public DateTime BidTimestamp { get; set; }
 
         public Product(int itemNumber, string itemDescription, decimal ratingPrice, decimal bidPrice, string bidCustomName, int bidCustomPhone, DateTime bidTimestamp)
