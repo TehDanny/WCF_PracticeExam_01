@@ -13,7 +13,9 @@ namespace WcfWebApplication
     {
         [OperationContract]
         List<Product> GetAllProducts();
+        [OperationContract]
         Product GetProduct(int ItemNumber);
+        [OperationContract]
         void BidOnProduct(Bid bid);
     }
 }
