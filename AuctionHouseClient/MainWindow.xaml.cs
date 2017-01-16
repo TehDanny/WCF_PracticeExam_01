@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using AuctionHouseClient.AuctionHouseServiceReference;
 
 namespace AuctionHouseClient
 {
@@ -23,6 +24,30 @@ namespace AuctionHouseClient
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void GetAllProductsBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Controller c = new Controller();
+            ProductGrid.AutoGenerateColumns = true;
+            ProductGrid.ItemsSource = c.GetAllProducts();
+        }
+
+        private void GetProductBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Controller c = new Controller();
+            List<Product> pl = new List<Product>();
+            Product p = c.GetProduct(ItemNumberTbx.Text);
+            pl.Add(p);
+
+            ProductGrid.AutoGenerateColumns = true;
+            ProductGrid.ItemsSource = pl;
+        }
+
+        private void PlaceBidBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Controller c = new Controller();
+            c.BidOnProduct(BidItemNumberTbx.Text, BidPriceTbx.Text, CustomNameTbx.Text, CustomPhoneTbx.Text);
         }
     }
 }

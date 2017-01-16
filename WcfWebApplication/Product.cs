@@ -35,10 +35,10 @@ namespace WcfWebApplication
             BidTimestamp = bidTimestamp;
         }
 
-        void HardcodeProducts()
+        static internal void HardcodeProducts()
         {
             Product p1 = new Product(1, "Brugt cykel", 1000.00M, 500.00M, "Daniel Alexander Nedergaard", 12345678, DateTime.Now);
-            Product p2 = new Product(1, "Smart ny bil", 50000.00M, 75000.00M, "Daniel Alexander Nedergaard", 12345678, DateTime.Now);
+            Product p2 = new Product(2, "Smart ny bil", 50000.00M, 75000.00M, "Bjørk", 87654321, DateTime.Now);
             AuctionHouseData.AddProduct(p1);
             AuctionHouseData.AddProduct(p2);
         }

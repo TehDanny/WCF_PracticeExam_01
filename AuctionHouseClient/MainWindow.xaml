@@ -7,6 +7,23 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Label x:Name="TitleLbl" Content="Auction house client" HorizontalAlignment="Left" Margin="192,0,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="CustomNameLbl" Content="Name: " HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="CustomNameTbx" HorizontalAlignment="Left" Height="23" Margin="58,28,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="TitleLbl_Copy" Content="Auction house client" HorizontalAlignment="Left" Margin="192,0,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="CustomPhoneLbl" Content="Phone Number: " HorizontalAlignment="Left" Margin="192,25,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="CustomPhoneTbx" HorizontalAlignment="Left" Height="23" Margin="288,28,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="GetAllProductsBtn" Content="Get all products" HorizontalAlignment="Left" Margin="10,77,0,0" VerticalAlignment="Top" Width="94" Click="GetAllProductsBtn_Click"/>
+        <Button x:Name="GetProductBtn" Content="Get product by item number" HorizontalAlignment="Left" Margin="126,77,0,0" VerticalAlignment="Top" Width="162" Click="GetProductBtn_Click"/>
+        <Label x:Name="ItemNumberLbl" Content="Item number: " HorizontalAlignment="Left" Margin="305,71,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="ItemNumberTbx" HorizontalAlignment="Left" Height="23" Margin="389,74,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="83"/>
+        <Label x:Name="BidTitle" Content="Bidding" HorizontalAlignment="Left" Margin="220,230,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="PlaceBidBtn" Content="Place bid" HorizontalAlignment="Left" Margin="424,270,0,0" VerticalAlignment="Top" Width="75" Click="PlaceBidBtn_Click"/>
+        <Label x:Name="BidItemNumberLbl" Content="Item number: " HorizontalAlignment="Left" Margin="20,264,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="BidItemNumberTbx" HorizontalAlignment="Left" Height="23" Margin="104,268,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="84"/>
+        <Label x:Name="BidPriceLBl" Content="Price: " HorizontalAlignment="Left" Margin="207,264,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="BidPriceTbx" HorizontalAlignment="Left" Height="23" Margin="249,268,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <DataGrid x:Name="ProductGrid" HorizontalAlignment="Left" Margin="20,111,0,0" VerticalAlignment="Top" Height="119" Width="452"/>
+
     </Grid>
 </Window>

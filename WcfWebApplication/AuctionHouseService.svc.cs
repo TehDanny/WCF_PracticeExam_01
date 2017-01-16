@@ -11,24 +11,9 @@ namespace WcfWebApplication
     // NOTE: In order to launch WCF Test Client for testing this service, please select AuctionHouseService.svc or AuctionHouseService.svc.cs at the Solution Explorer and start debugging.
     public class AuctionHouseService : IAuctionHouseService
     {
-        List<Product> ProductList = new List<Product>();
-        private object myLock = new object();
-
         public void BidOnProduct(Bid bid)
         {
-            lock(myLock)
-            {
-                foreach (var item in ProductList)
-                {
-                    if (bid.ItemNumber == item.ItemNumber)
-                        if (bid.Price > item.BidPrice)
-                            item.BidPrice = bid.Price;
-                        else
-                            throw new Exception("Bid is too low.");
-                    else
-                        throw new Exception("Product doesn't exist.");
-                }
-            }
+            AuctionHouseData.BidOnProduct(bid);
         }
 
         public List<Product> GetAllProducts()
@@ -36,17 +21,9 @@ namespace WcfWebApplication
             return AuctionHouseData.GetAllProducts();
         }
 
-        public Product GetProduct(int ItemNumber)
+        public Product GetProduct(int itemNumber)
         {
-            foreach (var item in ProductList)
-            {
-                if (item.ItemNumber == ItemNumber)
-                    return item;
-            }
-
-            return null;
+            return AuctionHouseData.GetProduct(itemNumber);
         }
-
-        
     }
 }

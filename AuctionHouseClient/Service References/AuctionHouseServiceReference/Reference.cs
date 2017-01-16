@@ -252,16 +252,16 @@ namespace AuctionHouseClient.AuctionHouseServiceReference {
     public interface IAuctionHouseService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAuctionHouseService/GetAllProducts", ReplyAction="http://tempuri.org/IAuctionHouseService/GetAllProductsResponse")]
-        AuctionHouseClient.AuctionHouseServiceReference.Product[] GetAllProducts();
+        System.Collections.Generic.List<AuctionHouseClient.AuctionHouseServiceReference.Product> GetAllProducts();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAuctionHouseService/GetAllProducts", ReplyAction="http://tempuri.org/IAuctionHouseService/GetAllProductsResponse")]
-        System.Threading.Tasks.Task<AuctionHouseClient.AuctionHouseServiceReference.Product[]> GetAllProductsAsync();
+        System.Threading.Tasks.Task<System.Collections.Generic.List<AuctionHouseClient.AuctionHouseServiceReference.Product>> GetAllProductsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAuctionHouseService/GetProduct", ReplyAction="http://tempuri.org/IAuctionHouseService/GetProductResponse")]
-        AuctionHouseClient.AuctionHouseServiceReference.Product GetProduct(int ItemNumber);
+        AuctionHouseClient.AuctionHouseServiceReference.Product GetProduct(int itemNumber);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAuctionHouseService/GetProduct", ReplyAction="http://tempuri.org/IAuctionHouseService/GetProductResponse")]
-        System.Threading.Tasks.Task<AuctionHouseClient.AuctionHouseServiceReference.Product> GetProductAsync(int ItemNumber);
+        System.Threading.Tasks.Task<AuctionHouseClient.AuctionHouseServiceReference.Product> GetProductAsync(int itemNumber);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAuctionHouseService/BidOnProduct", ReplyAction="http://tempuri.org/IAuctionHouseService/BidOnProductResponse")]
         void BidOnProduct(AuctionHouseClient.AuctionHouseServiceReference.Bid bid);
@@ -297,20 +297,20 @@ namespace AuctionHouseClient.AuctionHouseServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public AuctionHouseClient.AuctionHouseServiceReference.Product[] GetAllProducts() {
+        public System.Collections.Generic.List<AuctionHouseClient.AuctionHouseServiceReference.Product> GetAllProducts() {
             return base.Channel.GetAllProducts();
         }
         
-        public System.Threading.Tasks.Task<AuctionHouseClient.AuctionHouseServiceReference.Product[]> GetAllProductsAsync() {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<AuctionHouseClient.AuctionHouseServiceReference.Product>> GetAllProductsAsync() {
             return base.Channel.GetAllProductsAsync();
         }
         
-        public AuctionHouseClient.AuctionHouseServiceReference.Product GetProduct(int ItemNumber) {
-            return base.Channel.GetProduct(ItemNumber);
+        public AuctionHouseClient.AuctionHouseServiceReference.Product GetProduct(int itemNumber) {
+            return base.Channel.GetProduct(itemNumber);
         }
         
-        public System.Threading.Tasks.Task<AuctionHouseClient.AuctionHouseServiceReference.Product> GetProductAsync(int ItemNumber) {
-            return base.Channel.GetProductAsync(ItemNumber);
+        public System.Threading.Tasks.Task<AuctionHouseClient.AuctionHouseServiceReference.Product> GetProductAsync(int itemNumber) {
+            return base.Channel.GetProductAsync(itemNumber);
         }
         
         public void BidOnProduct(AuctionHouseClient.AuctionHouseServiceReference.Bid bid) {
